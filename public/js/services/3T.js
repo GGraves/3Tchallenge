@@ -1,7 +1,10 @@
 angular.module( '3T', []).factory( 'TFactory', function( $window)
 {
     return {
+
         /*
+        test methods
+
         one : function()
         {
             $window.alert( "one");        
