@@ -8,3 +8,4 @@ Implement an automated version of tic-tac-toe. Your program can assign random mo
  
 Based on these conditions your program should never print out a full board unless the final move is a game winning move. If a game is going to end in a draw just print out the board. The program should run until X or O has won 10 games, and then finally output the amount of time it took to run the simulation. 
 ***
+
