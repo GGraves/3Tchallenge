@@ -17,8 +17,3 @@ db/journal
 
 temp
 
-#ignore the node modules (users should have this locally)
-node_modules/
-
-#ignore the bower modules (users should have this locally)
-public/libs/
