@@ -48,20 +48,20 @@ angular.module( '3T', []).factory( 'TFactory', function()
             if( xWin == 0 && oWin == 0)
             {
                 $( "button").prop( "disabled", true);
-                if( ( ".posi").length)
-                {   
-                    $( ".posi").fadeOut( 'slow', function()
-                    {
-                        $( ".posi").remove(); 
-                    });
-                }
-                
                 if( ( ".time").length)
                 {
                     $( ".time").fadeOut( 'slow', function()
                     {
                         $( ".time").remove();
                     });
+                    
+                    if( ( ".posi").length)
+                    {   
+                        $( ".posi").fadeOut( 'slow', function()
+                        {
+                            $( ".posi").remove(); 
+                        });
+                    }
                 }
             }
             if( xWin == 10)
