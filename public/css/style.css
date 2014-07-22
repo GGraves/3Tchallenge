@@ -1,19 +1,20 @@
 .bg
 {
-    background-color: #f6f6f6;
+    background-color: #1797a6;
     height: 35%;
 }
 
 .hdr
 {
+    border-bottom: 2px solid #2D302F;
     background-color: #1797A6;
     color: #f6f6f6;
-    position: relative;
-    top: -20px;
 }
 
 .ftr
 {
+    border-top: 2px solid #2D302F;
+    padding: 20px;
     background-color: #1797A6;
     min-height: 100%;
 }
@@ -42,11 +43,38 @@
 .TTT
 {
     position: relative;
+    background-color: #f6f6f6;
     min-height: 400px;
     max-height: 400px;
     padding: 30px;
-    top: -10px;
     overflow-y: scroll;
+}
+
+.small-ttt
+{
+    background: rgba(0,0,0,0); 
+    text-align:center;
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.large-ttt
+{
+    background: rgba(0,0,0,0); 
+    text-align:center;
+    position: absolute;
+    padding: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    text-align: center;
+    float: center;
 }
 
 .posi
@@ -54,6 +82,17 @@
     position: relative;
     margin: 10px;
     float: left;
+}
+
+.tcenter
+{
+    max-width: 100%;
+    text-align: center;
+    height: 50%;
+}
+
+.mcenter
+{
 }
 
 h1
@@ -68,11 +107,48 @@ hr
     border-color: #2D302F;
 }
 
+
+table 
+{
+    background-color: #79CFF2;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 5px 5px 5px #888888;
+    margin: 0 auto;
+    border: 1px solid #2D302F;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+
+.lrgtd
+{
+    border: 1px solid #2D302F;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    font-size: 60px;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+}
+
+.smltd
+{
+    border: 1px solid #2D302F;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+}
+/*
 table {
     background-color: #79CFF2;
     border-collapse: separate;
     border-spacing: 0;
     box-shadow: 5px 5px 5px #888888;
+    margin: 0 auto;
 }
 table, td {
     border: 1px solid #2D302F;
