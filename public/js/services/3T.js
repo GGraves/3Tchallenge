@@ -53,15 +53,14 @@ angular.module( '3T', []).factory( 'TFactory', function()
                     $( ".time").fadeOut( 'slow', function()
                     {
                         $( ".time").remove();
+                        if( ( ".posi").length)
+                        {   
+                            $( ".posi").fadeOut( 'slow', function()
+                            {
+                                $( ".posi").remove(); 
+                            });
+                        }
                     });
-                    
-                    if( ( ".posi").length)
-                    {   
-                        $( ".posi").fadeOut( 'slow', function()
-                        {
-                            $( ".posi").remove(); 
-                        });
-                    }
                 }
             }
             if( xWin == 10)
