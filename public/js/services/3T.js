@@ -222,7 +222,13 @@ angular.module( '3T', []).factory( 'TFactory', function()
                                     if( validMoves.length)
                                         playerMove( false, callBack);
                                     else
+                                    {
+                                        if( player == 'X')
+                                            xWin++;
+                                        else
+                                            oWin++;
                                         playerMove( true, callBack);
+                                    }
                                 });
                             }
                             else
@@ -239,7 +245,13 @@ angular.module( '3T', []).factory( 'TFactory', function()
                                             if( validMoves.length)
                                                 playerMove( false, callBack);
                                             else
+                                            {
+                                                if( player == 'X')
+                                                    xWin++;
+                                                else
+                                                    oWin++;
                                                 playerMove( true, callBack);
+                                            }
                                         });
                                     }
                                     else
@@ -252,7 +264,13 @@ angular.module( '3T', []).factory( 'TFactory', function()
                                             if( validMoves.length)
                                                 playerMove( false, callBack);
                                             else
+                                            {
+                                                if( player == 'X')
+                                                    xWin++;
+                                                else
+                                                    oWin++;
                                                 playerMove( true, callBack);
+                                            }
                                         });
                                     }
                                 });
