@@ -155,10 +155,21 @@ angular.module( '3T', []).factory( 'TFactory', function()
 
         function playerMove( finished, callBack)
         {
-            player = completedMoves.length % 2? 'O': 'X';
-            action = ( completedMoves.length % 2 && xBetter) || ( !completedMoves.length % 2 && !xBetter)? 'BAD': 'GOOD';
+            if( !finished)
+            {
+                player = completedMoves.length % 2? 'O': 'X';
+                action = ( completedMoves.length % 2 && xBetter) || ( !completedMoves.length % 2 && !xBetter)? 'BAD': 'GOOD';
+            }
+
             if( finished == true)
             {
+                if( completedMoves.length != 9) 
+                {
+                    if( player == 'X')
+                        xWin++;
+                    else
+                        oWin++;
+                }
                 callBack();
             }
             else if( action == 'BAD' && ( Math.floor( Math.random() * 2)))
@@ -201,10 +212,6 @@ angular.module( '3T', []).factory( 'TFactory', function()
                     {
                         board[ win - 1].player = player;
                         winner = player + " Wins!";
-                        if( player == 'X')
-                            xWin++;
-                        else
-                            oWin++;
                         validMoves = [];
                         playerMove( true, callBack);
                     }
@@ -222,13 +229,7 @@ angular.module( '3T', []).factory( 'TFactory', function()
                                     if( validMoves.length)
                                         playerMove( false, callBack);
                                     else
-                                    {
-                                        if( player == 'X')
-                                            xWin++;
-                                        else
-                                            oWin++;
                                         playerMove( true, callBack);
-                                    }
                                 });
                             }
                             else
@@ -245,13 +246,7 @@ angular.module( '3T', []).factory( 'TFactory', function()
                                             if( validMoves.length)
                                                 playerMove( false, callBack);
                                             else
-                                            {
-                                                if( player == 'X')
-                                                    xWin++;
-                                                else
-                                                    oWin++;
                                                 playerMove( true, callBack);
-                                            }
                                         });
                                     }
                                     else
@@ -264,13 +259,7 @@ angular.module( '3T', []).factory( 'TFactory', function()
                                             if( validMoves.length)
                                                 playerMove( false, callBack);
                                             else
-                                            {
-                                                if( player == 'X')
-                                                    xWin++;
-                                                else
-                                                    oWin++;
                                                 playerMove( true, callBack);
-                                            }
                                         });
                                     }
                                 });
